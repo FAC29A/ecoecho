@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoImmerse</title>
+    <title>EcoEcho</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -32,7 +32,7 @@
         <section>
             <h2>About</h2>
             <p>about our product</p>
-<hr>
+            <hr>
             <div>
                 <button>Forest1</button>
                 <button>2</button>
@@ -46,10 +46,69 @@
         <section>
             <h2>The Team</h2>
             <p>meet the team</p>
+
+            <div class="team-member">
+                <img src="media/marikaAI.jpg" alt="Marika">
+                <p><strong>Marika</strong></p>
+                <p>Marika is a VR enthusiast and has 5 years of experience in the field. She loves hiking during
+                    weekends.
+                </p>
+            </div>
+
+            <div class="team-member">
+                <img src="media/paingAI.jpg" altt="Paing">
+                <p><strong>Paing</strong></p>
+                <p>Paing is a programmer and designer who brings his passion for nature into the VR world.</p>
+            </div>
+
+            <div class="team-member">
+                <img src="media/berty.jpg" alt="Berty">
+                <p><strong>Berty</strong></p>
+                <p>Berty specializes in sound design and ensures our VR forests sound as real as they look.</p>
+            </div>
+
+            <div class="team-member">
+                <img src="media/andyAI.jpg" alt="Andy">
+                <p><strong>Andy</strong></p>
+                <p>Andy manages the team and ensures that everything runs smoothly. He's also a keen birdwatcher.</p>
+            </div>
+
         </section>
+
 
         <section>
             <h2>Contact</h2>
+            <form id="form" action="" method="GET">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" />
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" />
+
+                <label for="tel">Telephone</label>
+                <input id="tel" name="tel" type="tel" />
+
+                <fieldset>
+                    <legend>Preferred contact method</legend>
+
+                    <input id="contact-email" type="radio" name="contact" value="email" checked />
+                    <label for="contact-email" class="radio">Email</label>
+
+                    <input id="contact-tel" type="radio" name="contact" value="telephone" />
+                    <label for="contact-tel" class="radio">Telephone</label>
+
+                    <input id="contact-post" type="radio" name="contact" value="post" />
+                    <label for="contact-post" class="radio">Post</label>
+                </fieldset>
+
+                <label for="message">Message</label>
+                <textarea name="message"></textarea>
+
+                <input id="marketingConsent" name="marketingConsent" type="checkbox" />
+                <label for="marketingConsent" class="checkbox">Just wreck my inbox</label>
+
+                <button type="submit">Submit</button>
+            </form>
         </section>
     </main>
 
