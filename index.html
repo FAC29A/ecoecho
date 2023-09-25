@@ -6,121 +6,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoEcho</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="media/ecoechologo-removebg-preview.png">
+
 </head>
 
 <body>
-
-    <nav>
-        <ul>
-            <div>
-                <img src="" alt="Logo">
-            </div>
-            <div>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">The Team</a>
-                <a href="#">Contact</a>
-            </div>
-        </ul>
-    </nav>
-
     <main>
-        <section>
-            <h1>Bringing a forest into a VR world</h1>
-        </section>
+        <div class="headerContainer">
+            <nav aria-label="Main Navigation" class="mainNav">
+                <div class="logoWrapper">
+                    <img src="media/ecoecho.png" alt="Ecoecho Logo">
+                </div>
 
-        <section>
-            <h2>About</h2>
-            <p>about our product</p>
-            <hr>
-            <div>
-                <button>Forest1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
+                <ul class="menuBar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">The Team</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+
+
+            <section id="home">
+                <h1>Bringing a forest into a VR world</h1>
+            </section>
+        </div>
+
+        <section id="about">
+            <h2>See Our Products & Service</h2>
+            <p> a brief or detailed description about product, its
+                features,
+                benefits, and what makes it stand out in the market. Accompanying images can help in visual
+                representation.
+            </p>
+            <div class="about-content">
+
+                <img src="media/eco5.jpg" alt="Product Image">
+                <img src="media/eco3.jpg" alt="Product Image">
+                <img src="media/eco4.jpg" alt="Product Image">
+                <button id="teaserButton">Watch teaser to feel the experience</button>
+            </div>
+
+            <div id="videoModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <video controls>
+                        <source src="media/forest(360p).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
 
 
         </section>
 
-        <section>
-            <h2>The Team</h2>
-            <p>meet the team</p>
 
-            <div class="team-member">
-                <img src="media/marikaAI.jpg" alt="Marika">
-                <p><strong>Marika</strong></p>
-                <p>Marika is a VR enthusiast and has 5 years of experience in the field. She loves hiking during
-                    weekends.
-                </p>
+        <section id="team">
+            <h2>Meet The Team</h2>
+
+            <div class="team-section">
+                <div class="team-member">
+                    <img src="media/marikaAI.jpg" alt="Marika's portrait">
+                    <p><strong>Marika</strong></p>
+                    <p>Position/Role</p>
+                    <p>Marika is a VR enthusiast and has 5 years of experience in the field. She loves hiking during
+                        weekends.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="media/mark.jpg" alt="Makr's porttait">
+                    <p><strong>Mark</strong></p>
+                    <p>Position/Role</p>
+                    <p>Description or any other details about Mark.</p>
+                </div>
+
+
+                <div class="team-member">
+                    <img src="media/berty.jpg" alt="Berty's portrait">
+                    <p><strong>Berty</strong></p>
+                    <p>Position/Role</p>
+                    <p>Berty specializes in sound design and ensures our VR forests sound as real as they look.</p>
+                </div>
+
+
+                <div class="team-member">
+                    <img src="media/andyAI.jpg" alt="Andy's portrait">
+                    <p><strong>Andy</strong></p>
+                    <p>Position/Role</p>
+                    <p>Andy manages the team and ensures that everything runs smoothly. He's also a keen birdwatcher.
+                    </p>
+                </div>
+                <div class="team-member">
+                    <img src="media/paingAI.jpg" alt="Paing's portrait">
+                    <p><strong>Paing</strong></p>
+                    <p>Position/Role</p>
+                    <p>Paing is a programmer and designer who brings his passion for nature into the VR world.</p>
+                </div>
+
             </div>
-
-            <div class="team-member">
-                <img src="media/paingAI.jpg" altt="Paing">
-                <p><strong>Paing</strong></p>
-                <p>Paing is a programmer and designer who brings his passion for nature into the VR world.</p>
-            </div>
-
-            <div class="team-member">
-                <img src="media/berty.jpg" alt="Berty">
-                <p><strong>Berty</strong></p>
-                <p>Berty specializes in sound design and ensures our VR forests sound as real as they look.</p>
-            </div>
-
-            <div class="team-member">
-                <img src="media/andyAI.jpg" alt="Andy">
-                <p><strong>Andy</strong></p>
-                <p>Andy manages the team and ensures that everything runs smoothly. He's also a keen birdwatcher.</p>
-            </div>
-
         </section>
 
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-        <section>
-            <h2>Contact</h2>
-            <form id="form" action="" method="GET">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" />
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" />
-
-                <label for="tel">Telephone</label>
-                <input id="tel" name="tel" type="tel" />
-
-                <fieldset>
-                    <legend>Preferred contact method</legend>
-
-                    <input id="contact-email" type="radio" name="contact" value="email" checked />
-                    <label for="contact-email" class="radio">Email</label>
-
-                    <input id="contact-tel" type="radio" name="contact" value="telephone" />
-                    <label for="contact-tel" class="radio">Telephone</label>
-
-                    <input id="contact-post" type="radio" name="contact" value="post" />
-                    <label for="contact-post" class="radio">Post</label>
-                </fieldset>
-
-                <label for="message">Message</label>
-                <textarea name="message"></textarea>
-
-                <input id="marketingConsent" name="marketingConsent" type="checkbox" />
-                <label for="marketingConsent" class="checkbox">Just wreck my inbox</label>
+                <div class="input-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
 
                 <button type="submit">Submit</button>
             </form>
         </section>
+
     </main>
 
     <footer>
-        <div>
-            <small>&copyPM2023</small>
-        </div>
-
-        <div>
-            <small>made by Paing & Marika</small>
-        </div>
+        <small>&copy; ecoecho2023_PM</small>
+        <small>made by Paing & Marika</small>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
