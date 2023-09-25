@@ -13,6 +13,17 @@ body {
     scroll-behavior: smooth;
 }
 
+
+a:focus, a:hover {
+    text-decoration: underline;
+    outline: 2px solid #ffffff;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
 .background-container {
     background-image: url("media/vr.png");
     background-size: cover;
@@ -20,20 +31,6 @@ body {
     background-position: center center;
     height: calc(100vh - 60px);
     opacity: 95%;
-}
-
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-img {
-    max-width: 100%;
-    display: block;
 }
 
 .mainNav {
@@ -81,14 +78,10 @@ img {
     transition: background-color 0.3s ease;
 }
 
-.menuBar li a:hover {
+.menuBar li a:hover, 
+.menuBar li a:focus {
     background-color: rgba(200, 218, 209, 0.287);
-}
-
-
-#home {
-    position: relative;
-    height: 100%;
+    outline: none;
 }
 
 
@@ -114,7 +107,7 @@ img {
 }
 
 
-#about {
+#about, #team {
     padding: 2rem;
     text-align: center;
     background-color: #f9f9f9;
@@ -155,7 +148,7 @@ img {
     cursor: pointer;
 }
 
-#teaserButton {
+button {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     background-color: #333;
@@ -166,20 +159,8 @@ img {
     transition: background-color 0.3s ease;
 }
 
-#teaserButton:hover {
+button:hover {
     background-color: #555;
-}
-
-
-#team {
-    padding: 1rem;
-    background-color: #f5f5f5;
-    text-align: center;
-}
-
-#team h2 {
-    margin-top: 0;
-    color: blue;
 }
 
 .team-section {
@@ -253,20 +234,6 @@ img {
     resize: vertical;
 }
 
-button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #555;
-}
 
 footer {
     background-color: rgb(0, 0, 0);
