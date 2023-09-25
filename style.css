@@ -13,7 +13,7 @@ body {
     scroll-behavior: smooth;
 }
 
-.headerContainer {
+.background-container {
     background-image: url("media/vr.png");
     background-size: cover;
     background-repeat: no-repeat;
