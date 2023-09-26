@@ -32,28 +32,51 @@
 
     <main>
         <section id="about">
-            <h2>See Our Products & Service</h2>
-            <p>A brief or detailed description about product, its features, benefits, and what makes it stand out in the market. Accompanying images can help in visual representation.</p>
+            <h2>About Our Agency</h2>
+            <p>A brief or detailed description about product, its features, benefits, and what makes it stand out in the
+                market. Accompanying images can help in visual representation.</p>
             <div class="about-content">
-                <img src="media/eco5.jpg" alt="Product Image">
-                <img src="media/eco3.jpg" alt="Product Image">
-                <img src="media/eco4.jpg" alt="Product Image">
+                <div class="text-wrapper">
+                    <div class="text">
+                        <h3>Who We Are?</h3>
+                        <p>At EcoEcho ....</p>
+                    </div>
+                    <div class="text">
+                        <h3>Services We Provide:</h3>
+                        <p>
+                            Bringing you to the forest...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-img-wrapper">
+                    <img class="about-img" src="media/eco4.jpg" alt="Product Image">
+                    <img class="about-img" src="media/eco5.jpg" alt="Product Image">
+                    <img class="about-img" src="media/eco3.jpg" alt="Product Image">
+                </div>
+
                 <button id="teaserButton">Watch teaser to feel the experience</button>
             </div>
             <div id="videoModal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <video controls>
-                        <source src="media/forest(360p).mp4" type="video/mp4">
+                    <video controls preload="metadata" id="forest-videor">
+                        <source src="media/forest.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
             </div>
+
         </section>
 
 
         <section id="team">
+
             <h2>Meet The Team</h2>
+            <video id="background-video" autoplay muted loop>
+                <source src="media/bird.mp4">
+            </video>
+
 
             <div class="team-section">
                 <div class="team-member">
@@ -95,6 +118,41 @@
                 </div>
 
             </div>
+        </section>
+
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonial-wrapper">
+                <div class="reviews">
+
+                    <blockquote>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        <cite>by John Smith, 2017</cite>
+                    </blockquote>
+                </div>
+                <div class="reviews">
+                    <blockquote>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        <cite>by John Smith, 2017</cite>
+                    </blockquote>
+                </div>
+                <div class="reviews">
+
+                    <blockquote>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        <cite>by John Smith, 2017</cite>
+                    </blockquote>
+                </div>
+                <div class="reviews">
+
+                    <blockquote>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        <cite>by John Smith, 2017</cite>
+                    </blockquote>
+                </div>
+
+            </div>
+
         </section>
 
         <section id="contact">
