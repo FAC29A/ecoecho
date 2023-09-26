@@ -2,6 +2,7 @@ var modal = document.getElementById("videoModal");
 var btn = document.getElementById("teaserButton");
 var span = document.getElementsByClassName("close")[0];
 
+
 btn.onclick = function () {
   modal.style.display = "block";
 };
@@ -15,3 +16,15 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+// Function to smoothly navigate to webpage sections upon clicking menu links
+function scrollToSection(event) {
+  event.preventDefault();
+  const targetId = event.target.getAttribute('href');
+  const targetElement = document.querySelector(targetId);
+  targetElement.scrollIntoView({ behavior: "smooth" });
+}
+
+navLinks.forEach(link => {
+  link.addEventListener("click", scrollToSection);
+});
