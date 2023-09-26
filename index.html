@@ -11,13 +11,12 @@
 </head>
 
 <body>
-    <main>
-        <div class="headerContainer">
+    <div class="background-container">
+        <header>
             <nav aria-label="Main Navigation" class="mainNav">
                 <div class="logoWrapper">
                     <img src="media/ecoecho.png" alt="Ecoecho Logo">
                 </div>
-
                 <ul class="menuBar">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -25,29 +24,22 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
+        </header>
+        <section id="home">
+            <h1>Bringing a forest into a VR world</h1>
+        </section>
+    </div>
 
-
-
-            <section id="home">
-                <h1>Bringing a forest into a VR world</h1>
-            </section>
-        </div>
-
+    <main>
         <section id="about">
             <h2>See Our Products & Service</h2>
-            <p> a brief or detailed description about product, its
-                features,
-                benefits, and what makes it stand out in the market. Accompanying images can help in visual
-                representation.
-            </p>
+            <p>A brief or detailed description about product, its features, benefits, and what makes it stand out in the market. Accompanying images can help in visual representation.</p>
             <div class="about-content">
-
                 <img src="media/eco5.jpg" alt="Product Image">
                 <img src="media/eco3.jpg" alt="Product Image">
                 <img src="media/eco4.jpg" alt="Product Image">
                 <button id="teaserButton">Watch teaser to feel the experience</button>
             </div>
-
             <div id="videoModal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
@@ -57,8 +49,6 @@
                     </video>
                 </div>
             </div>
-
-
         </section>
 
 
@@ -112,17 +102,17 @@
             <form action="submit_form.php" method="post">
                 <div class="input-group">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required aria-required="true">
                 </div>
 
                 <div class="input-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required aria-required="true">
                 </div>
 
                 <div class="input-group">
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
                 </div>
 
                 <button type="submit">Submit</button>
@@ -131,7 +121,7 @@
 
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <small>&copy; ecoecho2023_PM</small>
         <small>made by Paing & Marika</small>
     </footer>
