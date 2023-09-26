@@ -18,10 +18,10 @@
                     <img src="media/ecoecho.png" alt="Ecoecho Logo">
                 </div>
                 <ul class="menuBar">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">The Team</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#team">The Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -32,29 +32,52 @@
 
     <main>
         <section id="about">
-            <h2>See Our Products & Service</h2>
-            <p>A brief or detailed description about product, its features, benefits, and what makes it stand out in the market. Accompanying images can help in visual representation.</p>
+            <h2>About Our Agency</h2>
+            <p>A brief or detailed description about product, its features, benefits, and what makes it stand out in the
+                market. Accompanying images can help in visual representation.</p>
             <div class="about-content">
-                <img src="media/eco5.jpg" alt="Product Image">
-                <img src="media/eco3.jpg" alt="Product Image">
-                <img src="media/eco4.jpg" alt="Product Image">
+                <div class="text-wrapper">
+                    <div class="text">
+                        <h3>Who We Are?</h3>
+                        <p>At EcoEcho ....</p>
+                    </div>
+                    <div class="text">
+                        <h3>Services We Provide:</h3>
+                        <p>
+                            Bringing you to the forest...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-img-wrapper">
+                    <img class="about-img" src="media/eco4.jpg" alt="Man using VR headset in the living room, standing in front of a TV.">
+                    <img class="about-img" src="media/eco5.jpg" alt="Woman from the waist up wearing a VR headset with nature images projected onto her chest and arms.">
+                    <img class="about-img" src="media/eco3.jpg" alt="Man using a VR headset while walking on a treadmill">
+                </div>
+
                 <button id="teaserButton">Watch teaser to feel the experience</button>
             </div>
             <div id="videoModal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <video controls>
-                        <source src="media/forest(360p).mp4" type="video/mp4">
+                    <video controls preload="metadata" id="forest-videor">
+                        <source src="media/forest.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
             </div>
+
         </section>
 
 
         <section id="team">
-            <h2>Meet The Team</h2>
 
+            
+            <video id="background-video" autoplay muted loop>
+                <source src="media/bird.mp4">
+            </video>
+
+            <h2>Meet The Team</h2>
             <div class="team-section">
                 <div class="team-member">
                     <img src="media/marikaAI.jpg" alt="Marika's portrait">
@@ -65,7 +88,7 @@
                 </div>
 
                 <div class="team-member">
-                    <img src="media/mark.jpg" alt="Makr's porttait">
+                    <img src="media/mark.jpg" alt="Makr's portrait">
                     <p><strong>Mark</strong></p>
                     <p>Position/Role</p>
                     <p>Description or any other details about Mark.</p>
@@ -97,6 +120,41 @@
             </div>
         </section>
 
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonial-wrapper">
+                <div class="reviews">
+
+                    <blockquote>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        <cite>by John Smith, 2017</cite>
+                    </blockquote>
+                </div>
+                <div class="reviews">
+                    <blockquote>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        <cite>by John Smith, 2017</cite>
+                    </blockquote>
+                </div>
+                <div class="reviews">
+
+                    <blockquote>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        <cite>by John Smith, 2017</cite>
+                    </blockquote>
+                </div>
+                <div class="reviews">
+
+                    <blockquote>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        <cite>by John Smith, 2017</cite>
+                    </blockquote>
+                </div>
+
+            </div>
+
+        </section>
+
         <section id="contact">
             <h2>Contact Us</h2>
             <form action="submit_form.php" method="post">
@@ -121,7 +179,7 @@
 
     </main>
 
-    <footer role="contentinfo">
+    <footer>
         <small>&copy; ecoecho2023_PM</small>
         <small>made by Paing & Marika</small>
     </footer>
