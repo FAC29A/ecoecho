@@ -38,7 +38,7 @@ Experience the magic of EcoEcho on [GitHub Pages](https://fac29a.github.io/ecoec
 ## Acknowledgements
 
 **Fonts**:
-- Headers: [Your Font for Headers, e.g., "Oswald"](link-to-font???)
-- Paragraphs, links, etc...: [Your Font for Text, e.g., "Roboto"](link-to-font???)
-[See the colour palette for the site here](link-to-color-palette???).
-etc ..blah blah blah
+- Headers: [Font for Headers, e.g., "Oswald"](link-to-font???)
+- Paragraphs, links, etc...: [Font for Text, e.g., "Roboto"](link-to-font???)
+- [See the colour palette for the site here](link-to-color-palette???).
+- etc ..blah blah blah
