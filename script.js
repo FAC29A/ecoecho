@@ -1,6 +1,8 @@
 var modal = document.getElementById("videoModal");
 var btn = document.getElementById("teaserButton");
 var span = document.getElementsByClassName("close")[0];
+const navLinks = document.querySelectorAll(".menuBar a");
+
 
 btn.onclick = function () {
   modal.style.display = "block";
@@ -27,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollToTopButton.style.display = "block";
     } else {
       scrollToTopButton.style.display = "none";
+
     }
   });
 
