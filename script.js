@@ -16,40 +16,21 @@ window.onclick = function (event) {
   }
 };
 
-const sections = document.querySelectorAll('section');
-const scrollTopBtn = document.getElementById('scrollTopBtn');
+document.addEventListener("DOMContentLoaded", function () {
+  let scrollToTopButton = document.getElementById("scrollTopBtn");
 
-scrollTopBtn.addEventListener('click', () => {
-  window.scroll({ top: 0, left: 0, behavior: 'smooth' });
-});
-
-
-window.addEventListener('scroll', () => {
-  let closestSection = null;
-  let minDistance = Infinity;
-
-  sections.forEach(section => {
-    const rect = section.getBoundingClientRect();
-    const distance = Math.abs(rect.bottom);
-
-    if (distance < minDistance) {
-      minDistance = distance;
-      closestSection = section;
+  window.addEventListener("scroll", function () {
+    if (
+      document.body.scrollTop > 100 ||
+      document.documentElement.scrollTop > 100
+    ) {
+      scrollToTopButton.style.display = "block";
+    } else {
+      scrollToTopButton.style.display = "none";
     }
   });
 
-  if (closestSection) {
-    const rect = closestSection.getBoundingClientRect();
-    const btnHeight = scrollTopBtn.offsetHeight;
-
-    // Update the button's position.
-    scrollTopBtn.style.bottom = (rect.bottom - btnHeight - 10) + 'px';
-  }
-
-  // Showing/hiding the button based on scroll position.
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollTopBtn.style.display = 'block';
-  } else {
-    scrollTopBtn.style.display = 'none';
-  }
+  scrollToTopButton.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });
