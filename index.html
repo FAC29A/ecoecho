@@ -17,7 +17,12 @@
                 <div class="logoWrapper">
                     <img src="media/ecoecho.png" alt="Ecoecho Logo">
                 </div>
-                <ul class="menuBar">
+                <!-- Hamburger Icon for Mobile -->
+                <a href="javascript:void(0)" id="hamburger-btn">
+                    <i class="menuBar mobile-menu">≡</i>
+                </a>
+                <!-- Navigation Menu -->
+                <ul id="nav-menu" class="menuBar desktop-menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#team">The Team</a></li>
@@ -26,9 +31,12 @@
             </nav>
         </header>
         <section id="home">
-            <h1>Bringing a forest into a VR world</h1>
+            <h1>Bringing a forest into VR world</h1>
         </section>
+
+
     </div>
+
 
     <main>
         <section id="about">
@@ -76,11 +84,12 @@
         <section id="team">
 
 
-            <video id="background-video" autoplay muted loop>
+            <video id="background-video" autoplay loop preload="metadata">
                 <source src="media/bird.mp4">
             </video>
 
             <h2>Meet The Team</h2>
+
             <div class="team-section">
                 <div class="team-member">
                     <img src="media/marikaAI.jpg" alt="Marika's portrait">
@@ -183,6 +192,7 @@
     </main>
 
     <footer>
+        <button id="mute-toggle">Mute/Unmute</button>
         <small>&copy; ecoecho2023_PM</small>
     </footer>
 

@@ -1,11 +1,13 @@
+/* Universal styling to ensure consistent box sizing across elements */
 * {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
+/* Standard styling for the HTML and body elements */
 html,
 body {
-    padding: 0;
-    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     line-height: 1.6;
     font-size: 18px;
@@ -13,6 +15,7 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Styling for anchor tags */
 a {
     text-decoration: none;
 }
@@ -24,20 +27,37 @@ a:hover {
     outline: 2px solid #ffffff;
 }
 
+#hamburger-btn:hover,
+#hamburger-btn:focus {
+    text-decoration: none;
+}
+
+
+#nav-menu.mobile-active li a:hover,
+#nav-menu.mobile-active li a:focus {
+    background-color: transparent;
+    outline: none;
+}
+
 img {
     max-width: 100%;
     display: block;
 }
 
+
+/* Main background container styling */
 .background-container {
     background-image: url("media/vr.png");
+    margin-top: 0;
+    padding-top: 0;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: center center;
     height: calc(100vh - 60px);
-    opacity: 95%;
+    /* opacity: 95%; */
 }
 
+/* Main navigation styling */
 .mainNav {
     display: flex;
     justify-content: space-between;
@@ -45,7 +65,12 @@ img {
     padding: 15px 20px;
     background: linear-gradient(to bottom, #068906b2, transparent);
     height: 125px;
+    position: fixed;
+    width: 100%;
+    transition: all 0.3s;
+    z-index: 1000;
 }
+
 
 .logoWrapper {
     width: 80px;
@@ -65,7 +90,7 @@ img {
     bottom: -5px;
 }
 
-
+/* Main menu bar styling */
 .menuBar {
     list-style-type: none;
     padding: 0;
@@ -90,6 +115,45 @@ img {
 }
 
 
+
+/* Hamburger styling for mobile view */
+.mobile-menu {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+    padding: 15px;
+}
+
+
+
+
+#hamburger-btn {
+    z-index: 1001;
+    /* setting this value higher than the z-index of the mobile menu */
+}
+
+
+
+#nav-menu.mobile-active {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 1000;
+}
+
+#nav-menu.mobile-active li a {
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    color: white;
+}
+
+/* Main home section title styling */
 #home h1 {
     font-size: 2.5rem;
     color: #ffffff;
@@ -105,13 +169,8 @@ img {
     margin-top: 85px;
 }
 
-@media (max-width: 768px) {
-    #home h1 {
-        right: 5%;
-    }
-}
 
-
+/* General styling for the sections: about, team, and testimonials */
 #about,
 #team,
 #testimonials {
@@ -120,6 +179,7 @@ img {
     background-color: #f9f9f9;
 }
 
+/* Main title styling */
 h2 {
     font-size: 1.75rem;
     margin-top: 0.5em;
@@ -151,6 +211,7 @@ p {
     text-align: start;
 }
 
+/* Image wrapper styling inside the about section */
 .about-img-wrapper {
     display: flex;
     justify-content: space-around;
@@ -163,8 +224,7 @@ p {
     display: block;
 }
 
-
-
+/* Modal overlay styling */
 .modal {
     display: none;
     position: fixed;
@@ -189,6 +249,8 @@ p {
     overflow: auto;
 }
 
+
+/* Close button styling within the modal */
 .close {
     position: absolute;
     top: 10px;
@@ -199,13 +261,13 @@ p {
     padding: 5px 8px;
 }
 
+/* Video element styling */
 video {
     width: 100%;
     max-height: 70vh;
 }
 
-
-
+/* General button styling */
 button {
     font-size: 1rem;
     margin-top: 1rem;
@@ -222,10 +284,13 @@ button:hover {
     background-color: #555;
 }
 
+
+/* Team section styling */
 #team {
     position: relative;
     overflow: hidden;
 }
+
 
 #background-video {
     position: absolute;
@@ -276,7 +341,7 @@ button:hover {
 }
 
 
-/* Testimonials Section */
+/* Testimonials Section styling */
 #testimonials {
     padding: 2rem;
     background-color: #f9f9f9;
@@ -301,6 +366,7 @@ button:hover {
     text-align: left;
 }
 
+/* Blockquote styling for testimonial content */
 blockquote {
     font-size: 1em;
     font-style: italic;
@@ -317,13 +383,7 @@ cite {
 }
 
 
-@media (max-width: 768px) {
-    .reviews {
-        width: 100%;
-    }
-}
-
-
+/* Contact section styling */
 #contact {
     padding: 2rem;
     background-color: #f5f5f5;
@@ -368,21 +428,21 @@ cite {
     resize: vertical;
 }
 
-
+/* Footer styling */
 footer {
     background-color: rgb(0, 0, 0);
     color: deepskyblue;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
 }
 
-
+/* Scroll to top button styling */
 .scroll-top-btn {
     display: none;
     position: fixed;
-    bottom: 15px;
+    bottom: 10px;
     right: 20px;
     z-index: 99;
     border: none;
@@ -398,4 +458,93 @@ footer {
 
 .scroll-top-btn:hover {
     background-color: #555;
+}
+
+
+
+#mute-toggle {
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#mute-toggle:hover {
+    background-color: white;
+    color:#000;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+
+    .background-container {
+        background-size: cover;
+        background-position: center;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+        left: 50%;
+        top: 50%;
+        width: 70%;
+        text-align: center;
+    }
+
+    .menuBar {
+        display: block;
+        text-align: center;
+    }
+
+    .menuBar li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .about-img-wrapper {
+        flex-direction: column;
+    }
+
+    #background-video {
+        height: auto;
+        min-height: 100%;
+    }
+
+    .team-member {
+        flex-basis: 100%;
+    }
+
+    .reviews {
+        width: 100%;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    #nav-menu {
+        display: none;
+    }
+
+}
+
+
+@media (min-width: 769px) {
+    #nav-menu.mobile-active {
+        display: none;
+        position: static;
+        background-color: transparent;
+    }
 }
