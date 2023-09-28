@@ -1,13 +1,13 @@
 /* Universal styling to ensure consistent box sizing across elements */
 * {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 /* Standard styling for the HTML and body elements */
 html,
 body {
-    padding: 0;
-    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     line-height: 1.6;
     font-size: 18px;
@@ -27,6 +27,18 @@ a:hover {
     outline: 2px solid #ffffff;
 }
 
+#hamburger-btn:hover,
+#hamburger-btn:focus {
+    text-decoration: none;
+}
+
+
+#nav-menu.mobile-active li a:hover,
+#nav-menu.mobile-active li a:focus {
+    background-color: transparent;
+    outline: none;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -36,11 +48,13 @@ img {
 /* Main background container styling */
 .background-container {
     background-image: url("media/vr.png");
+    margin-top: 0;
+    padding-top: 0;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: center center;
     height: calc(100vh - 60px);
-    opacity: 95%;
+    /* opacity: 95%; */
 }
 
 /* Main navigation styling */
@@ -51,7 +65,12 @@ img {
     padding: 15px 20px;
     background: linear-gradient(to bottom, #068906b2, transparent);
     height: 125px;
+    position: fixed;
+    width: 100%;
+    transition: all 0.3s;
+    z-index: 1000;
 }
+
 
 .logoWrapper {
     width: 80px;
@@ -96,32 +115,42 @@ img {
 }
 
 
+
 /* Hamburger styling for mobile view */
 .mobile-menu {
     font-size: 2rem;
     display: none;
     cursor: pointer;
+    padding: 15px;
 }
 
 
+
+
+#hamburger-btn {
+    z-index: 1001;
+    /* setting this value higher than the z-index of the mobile menu */
+}
+
+
+
 #nav-menu.mobile-active {
-    display: flex;
+    display: block;
     flex-direction: column;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.9);
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    background-color: #000;
     z-index: 1000;
 }
 
 #nav-menu.mobile-active li a {
-    color: #fff;
-    font-size: 1.5rem;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    color: white;
 }
 
 /* Main home section title styling */
@@ -405,7 +434,7 @@ footer {
     color: deepskyblue;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
 }
 
@@ -413,7 +442,7 @@ footer {
 .scroll-top-btn {
     display: none;
     position: fixed;
-    bottom: 15px;
+    bottom: 10px;
     right: 20px;
     z-index: 99;
     border: none;
@@ -432,26 +461,49 @@ footer {
 }
 
 
+
+#mute-toggle {
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#mute-toggle:hover {
+    background-color: white;
+    color:#000;
+}
+
 /* Media queries for smaller screens */
 @media (max-width: 768px) {
+
     .background-container {
-        background-size:auto;
-        background-position: center; 
+        background-size: cover;
+        background-position: center;
     }
 
     #home h1 {
-        font-size: 2rem; 
-        left: 50%; 
-        top: 50%;     
-        width: 70%;      
-        text-align: center; 
+        font-size: 2rem;
+        left: 50%;
+        top: 50%;
+        width: 70%;
+        text-align: center;
     }
 
     .menuBar {
         display: block;
         text-align: center;
     }
-    
+
     .menuBar li {
         display: block;
         margin: 10px 0;
@@ -462,12 +514,12 @@ footer {
     }
 
     #background-video {
-        height: auto; 
-        min-height: 100%;  
+        height: auto;
+        min-height: 100%;
     }
 
     .team-member {
-        flex-basis: 100%;  
+        flex-basis: 100%;
     }
 
     .reviews {
@@ -477,10 +529,22 @@ footer {
     .desktop-menu {
         display: none;
     }
+
     .mobile-menu {
         display: block;
     }
 
     #nav-menu {
-        display: none; 
-}}
+        display: none;
+    }
+
+}
+
+
+@media (min-width: 769px) {
+    #nav-menu.mobile-active {
+        display: none;
+        position: static;
+        background-color: transparent;
+    }
+}

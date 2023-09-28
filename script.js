@@ -44,8 +44,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Toggle the mobile menu visibility when the hamburger button is clicked
-document.getElementById('hamburger-btn').addEventListener('click', function() {
-  const nav = document.getElementById('nav-menu');
-  nav.classList.toggle('mobile-active');
+// document.getElementById('hamburger-btn').addEventListener('click', function() {
+//   const nav = document.getElementById('nav-menu');
+//   nav.classList.toggle('mobile-active');
+// });
+
+document.getElementById("hamburger-btn").addEventListener("click", function () {
+  const nav = document.getElementById("nav-menu");
+  const hamburgerIcon = document.querySelector(".mobile-menu");
+
+  nav.classList.toggle("mobile-active");
+
+  // Toggle the hamburger icon
+  if (nav.classList.contains("mobile-active")) {
+    hamburgerIcon.textContent = "✖"; // change to a close icon
+  } else {
+    hamburgerIcon.textContent = "≡"; // revert back to hamburger icon
+  }
 });
 
+
+
+window.addEventListener("resize", function () {
+  const nav = document.getElementById("nav-menu");
+
+  if (window.innerWidth > 768) {
+    // This is the breakpoint set in your CSS media query
+    nav.classList.remove("mobile-active"); // Hide the mobile menu
+    nav.removeAttribute("style"); // Reset any inline styles
+  }
+});
+
+
+document.getElementById("mute-toggle").addEventListener("click", function () {
+  var video = document.getElementById("background-video");
+  if (video.muted) {
+    video.muted = false;
+  } else {
+    video.muted = true;
+  }
+});
