@@ -38,4 +38,4 @@ Experience the magic of EcoEcho on [GitHub Pages](https://fac29a.github.io/ecoec
 ## Acknowledgements
 
 **Images**:
-- Team members images: (https://www.canva.com/apps/text-to-image)
+- Team members images: [Canva text to image](https://www.canva.com/apps/text-to-image)
