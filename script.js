@@ -4,7 +4,6 @@ var btn = document.getElementById("teaserButton");
 var span = document.getElementsByClassName("close")[0];
 const navLinks = document.querySelectorAll(".menuBar a");
 
-
 btn.onclick = function () {
   modal.style.display = "block";
 };
@@ -23,7 +22,7 @@ window.onclick = function (event) {
 document.addEventListener("DOMContentLoaded", function () {
   let scrollToTopButton = document.getElementById("scrollTopBtn");
 
-   // When the user scrolls the page
+  // When the user scrolls the page
   window.addEventListener("scroll", function () {
     if (
       document.body.scrollTop > 100 ||
@@ -32,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollToTopButton.style.display = "block";
     } else {
       scrollToTopButton.style.display = "none";
-
     }
   });
 
@@ -41,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
-
 
 // Toggle the mobile menu visibility when the hamburger button is clicked
 // document.getElementById('hamburger-btn').addEventListener('click', function() {
@@ -63,8 +60,6 @@ document.getElementById("hamburger-btn").addEventListener("click", function () {
   }
 });
 
-
-
 window.addEventListener("resize", function () {
   const nav = document.getElementById("nav-menu");
 
@@ -75,12 +70,34 @@ window.addEventListener("resize", function () {
   }
 });
 
-
 document.getElementById("mute-toggle").addEventListener("click", function () {
   var video = document.getElementById("background-video");
+  var icon = document.getElementById("sound-icon");
+
   if (video.muted) {
     video.muted = false;
+    icon.className = "fas fa-volume-up"; // sound on icon
   } else {
     video.muted = true;
+    icon.className = "fas fa-volume-mute"; // sound off icon
   }
 });
+
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    
+    const thankYouDiv = document.getElementById("thankYouMessage");
+    thankYouDiv.style.display = "block";
+
+    // Clear the form
+    event.target.reset();
+
+    // Hide the thank you message after 3 seconds
+    setTimeout(function () {
+      thankYouDiv.style.display = "none";
+    }, 3000);
+  });
