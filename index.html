@@ -44,25 +44,24 @@
         <section id="about">
             <h2>About Our Agency</h2>
             <div class="about-content">
+    
+                <!-- Who We Are -->
                 <div class="text-wrapper">
-                    <div class="text">
+                    <img class="about-img" src="media/eco4.jpg" alt="Man using VR headset in the living room, standing in front of a TV.">
+                    <div class="text-content">
                         <h3>Who We Are?</h3>
-                        <br>
-                        <p>In the chaos of city life, many seek the calming embrace of nature. At EcoEcho, we don’t just
-                            understand this desire – we deeply feel it. We're more than just a tech company; we're a
-                            place of real human connection in today's fast-paced world.</p><br>
-                        <p>As leaders in combining technology with mental wellness, we aim to ease the challenges of
-                            urban life by offering a peaceful escape. For us, it's not only about the virtual world;
-                            it's about truly understanding what people need, building genuine connections, and promoting
-                            overall mental well-being.</p><br>
-                        <p>When you experience EcoEcho, it's more than just a brief getaway; it's a chance to transform
-                            and find a new beginning.</p>
+                        <p>In the chaos of city life, many seek the calming embrace of nature. At EcoEcho, we don’t just understand this desire – we deeply feel it. We're more than just a tech company; we're a place of real human connection in today's fast-paced world.</p>
+                        <p>As leaders in combining technology with mental wellness, we aim to ease the challenges of urban life by offering a peaceful escape. For us, it's not only about the virtual world; it's about truly understanding what people need, building genuine connections, and promoting overall mental well-being.</p>
+                        <p>When you experience EcoEcho, it's more than just a brief getaway; it's a chance to transform and find a new beginning.</p>
                     </div>
-                    <div class="text">
+                </div>
+    
+                <!-- Services We Provide -->
+                <div class="text-wrapper reverse">
+                    <img class="about-img" src="media/eco5.jpg" alt="Woman from the waist up wearing a VR headset with nature images projected onto her chest and arms.">
+                    <div class="text-content">
                         <h3>Services We Provide:</h3>
-                        <p>Bringing you to the forest, even when you're surrounded by skyscrapers. At EcoEcho, we
-                            specialize in:</p>
-                        <br>
+                        <p>Bringing you to the forest, even when you're surrounded by skyscrapers. At EcoEcho, we specialize in:</p>
                         <ul>
                             <li><strong>Virtual Nature Retreats:</strong> Transporting you to serene landscapes, helping
                                 you find peace amidst urban chaos.</li>
@@ -75,35 +74,34 @@
                             <li><strong>Community VR Gatherings:</strong> Join group sessions and connect with
                                 like-minded individuals, sharing peaceful moments together.</li>
                         </ul>
-                        <br>
-                        <p><strong>Our mission</strong> is to harness the power of technology to bring nature's healing
-                            touch closer to urban dwellers. With EcoEcho, you're not just entering a virtual world;
-                            you're embarking on a journey to mental well-being.</p>
                     </div>
                 </div>
-
-                <div class="about-img-wrapper">
-                    <img class="about-img" src="media/eco4.jpg"
-                        alt="Man using VR headset in the living room, standing in front of a TV.">
-                    <img class="about-img" src="media/eco5.jpg"
-                        alt="Woman from the waist up wearing a VR headset with nature images projected onto her chest and arms.">
-                    <img class="about-img" src="media/eco3.jpg"
-                        alt="Man using a VR headset while walking on a treadmill">
+    
+                <!-- Our Mission -->
+                <div class="text-wrapper">
+                    <img class="about-img" src="media/eco3.jpg" alt="Man using a VR headset while walking on a treadmill">
+                    <div class="text-content mission-text">
+                        <p><strong>Our mission</strong> is to harness the power of technology to bring nature's healing touch closer to urban dwellers. With EcoEcho, you're not just entering a virtual world; you're embarking on a journey to mental well-being.</p>
+                        <button id="teaserButton">Watch teaser to feel the experience</button>
+                    </div>
                 </div>
-
-                <button id="teaserButton">Watch teaser to feel the experience</button>
-            </div>
-            <div id="videoModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <video controls preload="metadata" id="forest-videor">
-                        <source src="media/forest.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+    
+                
+                
+                <!-- Video Modal -->
+                <div id="videoModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <video controls preload="metadata" id="forest-videor">
+                            <source src="media/forest.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
             </div>
-
         </section>
+    </main>
+    
 
 
         <section id="team">
@@ -246,6 +244,7 @@
                 <fieldset>
                     <legend>Who do you want to talk to?</legend>
 
+                    <div class="radio-group">
                     <input id="team-general" type="radio" name="team-member" value="General" checked />
                     <label for="team-general" class="radio">Customer Service</label>
 
@@ -254,7 +253,9 @@
 
                     <input id="team-mark" type="radio" name="team-member" value="Mark" />
                     <label for="team-mark" class="radio">Mark</label>
+                    </div>
 
+                    <div class="radio-group">
                     <input id="team-berty" type="radio" name="team-member" value="Berty" />
                     <label for="team-berty" class="radio">Berty</label>
 
@@ -263,6 +264,7 @@
 
                     <input id="team-paing" type="radio" name="team-member" value="Paing" />
                     <label for="team-paing" class="radio">Paing</label>
+                    </div>
 
                 </fieldset>
 
