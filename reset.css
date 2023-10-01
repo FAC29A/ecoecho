@@ -77,8 +77,33 @@ GLOBAL CSS VARIABLES
 */
 
 :root {
-    --header-bg: linear-gradient(to bottom, #068906b2, transparent);
-    --nav-link-color: #fff;
-    --nav-link-hover-bg: rgba(200, 218, 209, 0.287);
-    ...
+    /* Colors */
+    --primary-color: deepskyblue;
+    --background-color: #f9f9f9;
+    --text-color: #000;
+    --text-inverse-color: #fff;
+    --secondary-bg-color: rgba(0, 51, 0, 0.3);
+    --modal-bg-color: rgba(0, 0, 0, 0.7);
+    --shadow-color: rgba(133, 190, 225, 0.927);
+    --button-bg-color: #333;
+    --button-bg-hover-color: #555;
+    --hover-color: rgba(200, 218, 209, 0.287);
+    
+    /* Font sizes */
+    --main-font-size: 1rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1rem;
+
+    /* Spacings */
+    --main-padding: 15px 20px;
+    --main-gap: 20px;
+    --modal-padding: 2rem;
+    --button-padding: 0.75rem 1rem;
+    --main-margin: 1rem;
+    
+    /* Other values */
+    --border-radius: 5px;
+    --main-transition: all 0.3s;
 }
+
