@@ -40,11 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Toggle the mobile menu visibility when the hamburger button is clicked
-// document.getElementById('hamburger-btn').addEventListener('click', function() {
-//   const nav = document.getElementById('nav-menu');
-//   nav.classList.toggle('mobile-active');
-// });
 
 document.getElementById("hamburger-btn").addEventListener("click", function () {
   const nav = document.getElementById("nav-menu");

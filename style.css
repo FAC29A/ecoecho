@@ -10,7 +10,7 @@ NAVIGATION STYLING
     align-items: center;
     top: -20px;
     right: -10px;
-    left: 0px;
+    left: 0;
     padding: var(--main-padding);
     background: linear-gradient(to bottom, #068906b2, transparent);
     height: 125px;
@@ -132,7 +132,6 @@ BACKGROUND STYLING
     background-position: center;
     background-repeat: no-repeat;
     height: calc(100vh - 60px);
-    /* opacity: 95%; */
 }
 
 
