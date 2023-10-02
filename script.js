@@ -79,20 +79,61 @@ document.getElementById("mute-toggle").addEventListener("click", function () {
 });
 
 
+// document
+//   .getElementById("contactForm")
+//   .addEventListener("submit", function (event) {
+//     event.preventDefault();
+
+    
+//     const thankYouDiv = document.getElementById("thankYouMessage");
+//     thankYouDiv.style.display = "block";
+
+//     // Clear the form
+//     event.target.reset();
+
+//     // Hide the thank you message after 3 seconds
+//     setTimeout(function () {
+//       thankYouDiv.style.display = "none";
+//     }, 3000);
+//   });
+
 document
   .getElementById("contactForm")
   .addEventListener("submit", function (event) {
     event.preventDefault();
-
-    
-    const thankYouDiv = document.getElementById("thankYouMessage");
-    thankYouDiv.style.display = "block";
-
-    // Clear the form
-    event.target.reset();
-
-    // Hide the thank you message after 3 seconds
-    setTimeout(function () {
-      thankYouDiv.style.display = "none";
-    }, 3000);
+    // Reference to form element
+    const form = event.target;
+    // Get form data
+    const formData = new FormData(form);
+    // Submit the form data via AJAX
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Show the thank you message
+          const thankYouDiv = document.getElementById("thankYouMessage");
+          thankYouDiv.style.display = "block";
+          // Clear the form
+          form.reset();
+          // Hide the thank you message after 3 seconds
+          setTimeout(function () {
+            thankYouDiv.style.display = "none";
+          }, 3000);
+        } else {
+          //show some error message if needed
+          console.error("Form submission failed");
+        }
+      })
+      .catch((error) => {
+        // Handle network errors or other errors occurred during the fetch
+        console.error(
+          "There was a problem with the fetch operation:",
+          error.message
+        );
+      });
   });
