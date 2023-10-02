@@ -187,13 +187,14 @@ h3, p {
     font-size: var(--h3-font-size);
 }
 
-
 /* 
 =================================================
 TEXT & IMAGE STYLING
 =================================================
 */
 
+
+/* Flexbox for image and text side by side */
 .text-wrapper {
     display: flex;
     gap: var(--main-gap); 
@@ -256,6 +257,7 @@ TEXT & IMAGE STYLING
 MODAL STYLING
 =================================================
 */
+
 
 .modal {
     display: none;
@@ -399,6 +401,7 @@ TESTIMONIALS STYLING
 =================================================
 */
 
+
 #testimonials {
     padding: var(--modal-padding);
     background-color: var(--background-color);
@@ -482,6 +485,7 @@ CONTACT FORM STYLING
 
 
 
+
 /* 
 =================================================
 FIELDSET STYLING
@@ -558,7 +562,6 @@ input[type="radio"]:checked+.radio {
 THANK YOU MESSAGE STYLING
 =================================================
 */
-
 #contactForm {
     position: relative;
 }
@@ -626,7 +629,6 @@ SCROLL TO TOP BUTTON STYLING
 MUTE BUTTON STYLING
 =================================================
 */
-
 #mute-toggle {
     position: fixed;
     bottom: 5px;

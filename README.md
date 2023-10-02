@@ -37,8 +37,5 @@ Experience the magic of EcoEcho on [GitHub Pages](https://fac29a.github.io/ecoec
 
 ## Acknowledgements
 
-**Fonts**:
-- Headers: [Font for Headers, e.g., "Oswald"](link-to-font???)
-- Paragraphs, links, etc...: [Font for Text, e.g., "Roboto"](link-to-font???)
-- [See the colour palette for the site here](link-to-color-palette???).
-- etc ..blah blah blah
+**Images**:
+- Team members images: [Canva text to image](https://www.canva.com/apps/text-to-image)
