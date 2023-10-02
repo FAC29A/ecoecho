@@ -1,63 +1,9 @@
-/* Universal styling to ensure consistent box sizing across elements */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+/*
+=================================================
+NAVIGATION STYLING
+=================================================
+*/
 
-/* Standard styling for the HTML and body elements */
-html,
-body {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    line-height: 1.6;
-    font-size: 1rem;
-    color: black;
-    scroll-behavior: smooth;
-}
-
-/* Styling for anchor tags */
-a {
-    text-decoration: none;
-}
-
-
-a:focus,
-a:hover {
-    text-decoration: underline;
-    outline: 2px solid #ffffff;
-}
-
-#hamburger-btn:hover,
-#hamburger-btn:focus {
-    text-decoration: none;
-}
-
-
-#nav-menu.mobile-active li a:hover,
-#nav-menu.mobile-active li a:focus {
-    background-color: transparent;
-    outline: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-
-/* Main background container styling */
-.background-container {
-    background-image: url("media/vr.png");
-    margin-top: 0;
-    padding-top: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: calc(100vh - 60px);
-    /* opacity: 95%; */
-}
-
-/* Main navigation styling */
 .mainNav {
     display: flex;
     justify-content: space-between;
@@ -65,12 +11,12 @@ img {
     top: -20px;
     right: -10px;
     left: 0px;
-    padding: 15px 20px;
+    padding: var(--main-padding);
     background: linear-gradient(to bottom, #068906b2, transparent);
     height: 125px;
     position: fixed;
     width: 100%;
-    transition: all 0.3s;
+    transition: var(--main-transition);
     z-index: 1000;
 }
 
@@ -83,7 +29,7 @@ img {
     border-radius: 50%;
     overflow: hidden;
     position: relative;
-    box-shadow: 0px 4px 8px rgba(133, 190, 225, 0.927);
+    box-shadow: 0px 4px 8px var(--shadow-color);
 }
 
 .mainNav img {
@@ -95,50 +41,50 @@ img {
     bottom: -5px;
 }
 
-/* Main menu bar styling */
+
 .menuBar {
     list-style-type: none;
     padding: 0;
     display: flex;
     gap: 1.5rem;
-    background-color: rgba(0, 51, 0, 0.3);
+    background-color: var(--secondary-bg-color);
     padding: 1rem 1.5rem;
     border-radius: 8px;
 }
 
 .menuBar li a {
-    color: #fff;
+    color: var(--text-inverse-color);
+    transition: background-color var(--main-transition);
     padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: var(--border-radius);
+    
 }
 
 .menuBar li a:hover,
 .menuBar li a:focus {
-    background-color: rgba(200, 218, 209, 0.287);
+    background-color: var(--hover-color);
     outline: none;
 }
 
 
+/* 
+=================================================
+MOBILE NAVIGATION STYLING
+=================================================
+*/
 
-/* Hamburger styling for mobile view */
 .mobile-menu {
     font-size: 3rem;
     display: none;
     cursor: pointer;
     padding: 15px;
-    color: deepskyblue;
+    color: var(--primary-color);
 }
-
-
-
 
 #hamburger-btn {
     z-index: 1001;
     /* setting this value higher than the z-index of the mobile menu */
 }
-
-
 
 #nav-menu.mobile-active {
     display: block;
@@ -147,7 +93,7 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #000;
+    background-color: var(--text-color);
     z-index: 1000;
 }
 
@@ -156,13 +102,49 @@ img {
     text-align: center;
     width: 100%;
     display: block;
-    color: white;
+    color: var(--text-inverse-color);
 }
 
-/* Main home section title styling */
+#hamburger-btn:hover,
+#hamburger-btn:focus {
+    text-decoration: none;
+}
+
+#nav-menu.mobile-active li a:hover,
+#nav-menu.mobile-active li a:focus {
+    background-color: transparent;
+    outline: none;
+}
+
+
+
+/* 
+=================================================
+BACKGROUND STYLING
+=================================================
+*/
+
+.background-container {
+    background-image: url("media/vr.png");
+    margin-top: 0;
+    padding-top: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 60px);
+    /* opacity: 95%; */
+}
+
+
+/* 
+=================================================
+HOME SECTION STYLING
+=================================================
+*/
+
 #home h1 {
-    font-size: 2.5rem;
-    color: #ffffff;
+    font-size: var(--h1-font-size);
+    color: var(--text-inverse-color);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 1;
     background-color: rgba(11, 81, 11, 0.3);
@@ -176,48 +158,58 @@ img {
 }
 
 
-/* General styling for the sections: about, team, and testimonials */
+/* 
+=================================================
+GENERAL SECTION STYLING
+=================================================
+*/
+
 #about,
 #team,
 #testimonials {
-    padding: 2rem;
+    padding: var(--modal-padding);
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
 }
 
-/* Main title styling */
 h2 {
-    font-size: 1.75rem;
+    font-size: var(--h2-font-size);
     margin-top: 0.5em;
     margin-bottom: 5rem;
-    color: black;
+    color: var(--text-color);
     text-decoration: underline;
     text-align: center;
 }
 
-/* Styles for text contents */
 h3, p {
     text-align: left;
     margin-bottom: 0.9rem;
+    font-size: var(--h3-font-size);
 }
+
+/* 
+=================================================
+TEXT & IMAGE STYLING
+=================================================
+*/
+
 
 /* Flexbox for image and text side by side */
 .text-wrapper {
     display: flex;
-    gap: 20px;  
+    gap: var(--main-gap); 
     align-items: flex-start;  /* Aligns children to the top of the container */
 }
 
-/* Reverse flex-direction for specific case */
+/*specific style for 'Service we provide' section */
 .text-wrapper.reverse {
     flex-direction: row-reverse;
 }
 
-/* Styling for the text container */
 .text-content {
     flex: 1;  /* Allows it to occupy the remaining space in the flex container */
-    padding: 5px;
-    margin: 10px 0 20px 0px;
+    padding: var(--main-padding);
+    margin: var(--main-margin) 0 20px 0px;
     display: flex;
     flex-direction: column;  /* Stack its children vertically */
 }
@@ -242,7 +234,6 @@ h3, p {
     margin-left: 20px;
 }
 
-/* Image styling */
 .about-img {
     flex-shrink: 0;  /* Prevents the image from shrinking */
     width: 30%;
@@ -250,7 +241,6 @@ h3, p {
     margin-right: 20px; 
 }
 
-/* Button styling */
 #teaserButton {
     width: 50%;
     margin-top: 50px;
@@ -262,7 +252,13 @@ h3, p {
 }
 
 
-/* Modal overlay styling */
+/* 
+=================================================
+MODAL STYLING
+=================================================
+*/
+
+
 .modal {
     display: none;
     position: fixed;
@@ -270,7 +266,7 @@ h3, p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--modal-bg-color);
     z-index: 1000;
 }
 
@@ -279,7 +275,7 @@ h3, p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 2rem;
+    padding: var(--modal-padding);
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     max-width: 80vw;
@@ -305,25 +301,35 @@ video {
     max-height: 70vh;
 }
 
-/* General button styling */
+
+/* 
+=================================================
+BUTTON STYLING
+=================================================
+*/
+
 button {
-    font-size: 1rem;
-    margin-top: 1rem;
-    padding: 0.75rem 1rem;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+    font-size: var(--main-font-size);
+    margin-top: var(--main-margin);
+    padding: var(--button-padding);
+    background-color: var(--button-bg-color);
+    color: var(--text-inverse-color);
+    border-radius: var(--border-radius);
+    transition: var(--main-transition);
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: var(--button-bg-hover-color);
 }
 
 
-/* Team section styling */
+/* 
+=================================================
+TEAM STYLING
+=================================================
+*/
+
 #team {
     position: relative;
     overflow: hidden;
@@ -344,7 +350,7 @@ button:hover {
 .team-section {
     position: relative;
     z-index: 3;
-    color: black;
+    color: var(--text-color);
     padding: 2rem 0;
     display: flex;
     flex-wrap: wrap;
@@ -367,7 +373,7 @@ button:hover {
 #team>h2 {
     position: relative;
     z-index: 5;
-    color: black;
+    color: var(--text-color);
     text-align: center;
 }
 
@@ -386,13 +392,19 @@ button:hover {
 h3, p em {
     text-decoration: underline;
     text-decoration-style: double;
-    text-decoration-color: deepskyblue;
+    text-decoration-color: var(--primary-color);
 }
 
-/* Testimonials Section styling */
+/* 
+=================================================
+TESTIMONIALS STYLING
+=================================================
+*/
+
+
 #testimonials {
-    padding: 2rem;
-    background-color: #f9f9f9;
+    padding: var(--modal-padding);
+    background-color: var(--background-color);
     text-align: center;
 }
 
@@ -408,7 +420,7 @@ h3, p em {
     font-size: 0.9rem;
     width: 23%;
     padding: 1.5rem;
-    border: 1px solid deepskyblue;
+    border: 1px solid var(--primary-color);
     border-radius: 15%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
@@ -432,10 +444,15 @@ cite {
 }
 
 
-/* Contact section styling */
+/* 
+=================================================
+CONTACT FORM STYLING
+=================================================
+*/
+
 #contact {
-    padding: 2rem;
-    background-color: #f5f5f5;
+    padding: var(--modal-padding);
+    background-color: var(--background-color);
     text-align: center;
     background-image: url("media/room.jpg");
     background-size: cover;
@@ -456,10 +473,10 @@ cite {
     width: 100%;
     max-width: 500px;
     padding: 0.5rem;
-    border: 1px solid #333;
-    border-radius: 5px;
+    border: 1px solid var(--button-bg-color);
+    border-radius: var(--border-radius);
     font-size: 0.8rem;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--text-inverse-color);
 }
 
 .input-group textarea {
@@ -468,7 +485,13 @@ cite {
 
 
 
-/* Fieldset Styling */
+
+/* 
+=================================================
+FIELDSET STYLING
+=================================================
+*/
+
 fieldset {
     display: flex;
     flex-wrap: wrap;
@@ -478,16 +501,16 @@ fieldset {
     margin: 0 auto;
     padding-bottom: 15px;
     border: 1px solid #333;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     background-color: rgba(255, 255, 255, 0.8);
 }
 
 legend {
     margin-bottom: 0.5rem;
     font-weight: bold;
-    color: #000;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #333;
+    color: var(--text-color);
+    background-color: var(--text-inverse-color);
+    border: 1px solid var(--button-bg-color);
     padding: 4px;
     border-radius: 3px;
 }
@@ -522,19 +545,23 @@ input[type="radio"]:checked+.radio {
 }
 
 #submit {
-    background-color: #000;
+    background-color: var(--text-color);
     color: white;
-    font-size: 1rem;
+    font-size: var(--main-font-size);
     padding: 10px;
     margin-top: 5px;
 }
 
 #submit:hover {
-    background-color: #333;
+    background-color: var(--button-bg-color);
 }
 
 
-/* Thankyou message */
+/* 
+=================================================
+THANK YOU MESSAGE STYLING
+=================================================
+*/
 #contactForm {
     position: relative;
 }
@@ -552,17 +579,29 @@ input[type="radio"]:checked+.radio {
     z-index: 1;
 }
 
-/* Footer styling */
+
+/* 
+=================================================
+FOOTER STYLING
+=================================================
+*/
+
 footer {
-    background-color: rgb(0, 0, 0);
-    color: deepskyblue;
+    color: var(--primary-color);
+    background-color: var(--text-color);
     padding: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Scroll to top button styling */
+
+/* 
+=================================================
+SCROLL TO TOP BUTTON STYLING
+=================================================
+*/
+
 .scroll-top-btn {
     display: none;
     position: fixed;
@@ -571,21 +610,25 @@ footer {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #000;
-    color: white;
+    background-color: var(--text-color);
+    color: var(--text-inverse-color);
     cursor: pointer;
-    padding: 15px;
+    padding: var(--main-padding);
     border-radius: 10px;
-    font-size: 1rem;
-    transition: background-color 0.3s;
+    font-size: var(--main-font-size);
+    transition: var(--main-transition);
 }
 
 .scroll-top-btn:hover {
-    background-color: #555;
+    background-color: var(--button-bg-hover-color);
 }
 
 
-/* Mute button style */
+/* 
+=================================================
+MUTE BUTTON STYLING
+=================================================
+*/
 #mute-toggle {
     position: fixed;
     bottom: 5px;
@@ -593,19 +636,26 @@ footer {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #000;
-    color: white;
+    background-color: var(--text-color);
+    color: var(--text-inverse-color);
     cursor: pointer;
-    padding: 10px;
+    padding: var(--main-padding);
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: var(--main-font-size);
     transition: background-color 0.3s;
 }
 
 #mute-toggle:hover {
-    background-color: white;
-    color: #000;
+    background-color: var(--button-bg-hover-color);
+    color: var(--text-color);
 }
+
+
+/* 
+=================================================
+MEDIA QUERIES STYLING
+=================================================
+*/
 
 /* Media queries for smaller screens */
 @media screen and (max-width: 768px) {
