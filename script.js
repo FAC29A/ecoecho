@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 document.getElementById("hamburger-btn").addEventListener("click", function () {
   const nav = document.getElementById("nav-menu");
   const hamburgerIcon = document.querySelector(".mobile-menu");
@@ -78,13 +77,11 @@ document.getElementById("mute-toggle").addEventListener("click", function () {
   }
 });
 
-
 // document
 //   .getElementById("contactForm")
 //   .addEventListener("submit", function (event) {
 //     event.preventDefault();
 
-    
 //     const thankYouDiv = document.getElementById("thankYouMessage");
 //     thankYouDiv.style.display = "block";
 

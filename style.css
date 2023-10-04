@@ -57,7 +57,7 @@ NAVIGATION STYLING
     transition: background-color var(--main-transition);
     padding: 10px 15px;
     border-radius: var(--border-radius);
-    
+
 }
 
 .menuBar li a:hover,
@@ -125,7 +125,7 @@ BACKGROUND STYLING
 */
 
 .background-container {
-    background-image: url("media/vr.png");
+    background-image: url("media/images/vr.png");
     margin-top: 0;
     padding-top: 0;
     background-size: cover;
@@ -180,7 +180,8 @@ h2 {
     text-align: center;
 }
 
-h3, p {
+h3,
+p {
     text-align: left;
     margin-bottom: 0.9rem;
     font-size: var(--h3-font-size);
@@ -196,8 +197,9 @@ TEXT & IMAGE STYLING
 /* Flexbox for image and text side by side */
 .text-wrapper {
     display: flex;
-    gap: var(--main-gap); 
-    align-items: flex-start;  /* Aligns children to the top of the container */
+    gap: var(--main-gap);
+    align-items: flex-start;
+    /* Aligns children to the top of the container */
 }
 
 /*specific style for 'Service we provide' section */
@@ -206,11 +208,13 @@ TEXT & IMAGE STYLING
 }
 
 .text-content {
-    flex: 1;  /* Allows it to occupy the remaining space in the flex container */
+    flex: 1;
+    /* Allows it to occupy the remaining space in the flex container */
     padding: var(--main-padding);
     margin: var(--main-margin) 0 20px 0px;
     display: flex;
-    flex-direction: column;  /* Stack its children vertically */
+    flex-direction: column;
+    /* Stack its children vertically */
 }
 
 .text-content h3 {
@@ -234,10 +238,11 @@ TEXT & IMAGE STYLING
 }
 
 .about-img {
-    flex-shrink: 0;  /* Prevents the image from shrinking */
+    flex-shrink: 0;
+    /* Prevents the image from shrinking */
     width: 30%;
     margin-bottom: 40px;
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 
 #teaserButton {
@@ -388,7 +393,8 @@ TEAM STYLING
     font-style: italic;
 }
 
-h3, p em {
+h3,
+p em {
     text-decoration: underline;
     text-decoration-style: double;
     text-decoration-color: var(--primary-color);
@@ -453,7 +459,7 @@ CONTACT FORM STYLING
     padding: var(--modal-padding);
     background-color: var(--background-color);
     text-align: center;
-    background-image: url("media/room.jpg");
+    background-image: url("media/images/room.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -522,7 +528,7 @@ legend {
 }
 
 .radio-group label {
-    margin-left: 10px; 
+    margin-left: 10px;
     margin-right: 20px;
 }
 
@@ -727,7 +733,7 @@ MEDIA QUERIES STYLING
         margin-bottom: 20px;
     }
 
-    .text-wrapper, 
+    .text-wrapper,
     .text-wrapper.reverse {
         flex-direction: column;
         align-items: center;
@@ -738,21 +744,21 @@ MEDIA QUERIES STYLING
         padding: 15px;
     }
 
-    
+
     .radio-group {
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: center; 
+        align-items: center;
     }
 
     .radio-group label {
         margin-right: 0;
-        margin-bottom: 10px;  
+        margin-bottom: 10px;
     }
 
     .radio-group input[type="radio"],
     .radio-group label {
-        margin: 2px; 
+        margin: 2px;
     }
 
 }
