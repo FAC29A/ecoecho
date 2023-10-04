@@ -16,6 +16,7 @@ Feel the need to reconnect with nature but can't step out? Dive into our forest 
 - [Tech Stack](#tech-stack)
 - [Acknowledgments](#acknowledgments)
 
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
