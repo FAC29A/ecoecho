@@ -56,4 +56,4 @@ Experience the magic of EcoEcho on [GitHub Pages](https://fac29a.github.io/ecoec
 ## Acknowledgements
 
 **Images**:
-- Team members images: [Canva text to image](https://www.canva.com/apps/text-to-image)
+- Created all images, except Home page, using [Canva text to image](https://www.canva.com/apps/text-to-image)
